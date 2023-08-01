@@ -1,4 +1,4 @@
-#include "AMLVector3.h"
+#include "AMLVECTOR3.h"
 #include <cmath>
 
 namespace AML
@@ -10,11 +10,11 @@ namespace AML
 	Vector3::Vector3(double val)
 	:x(val), y(val), z(val)
 	{}
-	Vector3::Vector3(double x, double y, double z){}
+	Vector3::Vector3(double x_, double y_, double z_)
 	:x(x_), y(y_), z(z_)
 	{}
 	Vector3::Vector3(const double data_[3])
-	:x(data_[0]), y(data_[1], z(data_[2])
+	:x(data_[0]), y(data_[1]), z(data_[2])
 	{}
 
 	// Operator Assignments (Vector)
@@ -23,24 +23,28 @@ namespace AML
 		x += rhs.x;
 		y += rhs.y;
 		z += rhs.z;
+		return *this;
 	}
 	Vector3& Vector3::operator-=(const Vector3& rhs)
 	{
 		x -= rhs.x;
 		y -= rhs.y;
 		z -= rhs.z;
+		return *this;
 	}
 	Vector3& Vector3::operator*=(const Vector3& rhs)
 	{
 		x *= rhs.x;
 		y *= rhs.y;
 		z *= rhs.z;
+		return *this;
 	}
 	Vector3& Vector3::operator/=(const Vector3& rhs)
 	{
 		x /= rhs.x;
 		y /= rhs.y;
 		z /= rhs.z;
+		return *this;
 	}
 
 	// Operator Assignments (Scalar)
@@ -49,24 +53,28 @@ namespace AML
 		x += s;
 		y += s;
 		z += s;
+		return *this;
 	}
 	Vector3& Vector3::operator-=(double s)
 	{
 		x -= s;
 		y -= s;
 		z -= s;
+		return *this;
 	}
 	Vector3& Vector3::operator*=(double s)
 	{
 		x *= s;
 		y *= s;
 		z *= s;
+		return *this;
 	}
 	Vector3& Vector3::operator/=(double s)
 	{
 		x /= s;
 		y /= s;
 		z /= s;
+		return *this;
 	}
 
 	// Special Object Creators
@@ -119,7 +127,7 @@ namespace AML
 	// Stream Functions
 	std::ostream& operator<<(std::ostream& os, const Vector3& obj)
 	{
-		os << "[" << obj.x << ", " << obj.y << ", " obj.z << "]";
+		os << "[" << obj.x << ", " << obj.y << ", " << obj.z << "]";
 		return os;
 	}
 

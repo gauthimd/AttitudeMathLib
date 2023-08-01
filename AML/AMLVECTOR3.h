@@ -5,15 +5,16 @@
 
 namespace AML
 {
-	class vector3
+	class Vector3
 	{
 		public:
 			// Vector Data
 			union
 			{
 				double data[3];
-				struct(double x, y, z;);
-			}	
+				struct{double x, y, z;};
+			};
+			
 			// Constructors
 			Vector3();
 			Vector3(double val);
