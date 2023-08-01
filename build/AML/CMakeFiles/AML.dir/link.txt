@@ -1,2 +1,0 @@
-/usr/bin/ar qc libAML.a CMakeFiles/AML.dir/AMLVECTOR3.cpp.o
-/usr/bin/ranlib libAML.a
