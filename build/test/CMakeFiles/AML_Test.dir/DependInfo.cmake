@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/gauthimd/AttitudeMathLib/test/AMLVector3Test.cpp" "test/CMakeFiles/AML_Test.dir/AMLVector3Test.cpp.o" "gcc" "test/CMakeFiles/AML_Test.dir/AMLVector3Test.cpp.o.d"
   "/home/gauthimd/AttitudeMathLib/test/main.cpp" "test/CMakeFiles/AML_Test.dir/main.cpp.o" "gcc" "test/CMakeFiles/AML_Test.dir/main.cpp.o.d"
   )
 

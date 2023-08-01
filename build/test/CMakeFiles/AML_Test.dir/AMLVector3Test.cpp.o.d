@@ -1,5 +1,6 @@
-test/CMakeFiles/AML_Test.dir/main.cpp.o: \
- /home/gauthimd/AttitudeMathLib/test/main.cpp /usr/include/stdc-predef.h \
+test/CMakeFiles/AML_Test.dir/AMLVector3Test.cpp.o: \
+ /home/gauthimd/AttitudeMathLib/test/AMLVector3Test.cpp \
+ /usr/include/stdc-predef.h \
  /home/gauthimd/AttitudeMathLib/test/catch/catch.hpp \
  /usr/include/c++/12/sstream /usr/include/c++/12/istream \
  /usr/include/c++/12/ios /usr/include/c++/12/iosfwd \
@@ -211,46 +212,7 @@ test/CMakeFiles/AML_Test.dir/main.cpp.o: \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/stl_set.h \
  /usr/include/c++/12/bits/stl_multiset.h \
- /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/iostream \
- /usr/include/c++/12/fstream \
- /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/map \
- /usr/include/c++/12/bits/stl_map.h \
- /usr/include/c++/12/bits/stl_multimap.h /usr/include/assert.h \
- /usr/include/signal.h \
- /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
- /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
- /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
- /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
- /usr/include/x86_64-linux-gnu/bits/sigaction.h \
- /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
- /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
- /usr/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/sigstksz.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
- /usr/include/x86_64-linux-gnu/bits/sigthread.h \
- /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /usr/include/c++/12/random /usr/include/c++/12/bits/random.h \
- /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
- /usr/include/c++/12/bits/random.tcc /usr/include/c++/12/numeric \
- /usr/include/c++/12/bits/stl_numeric.h \
- /usr/include/c++/12/pstl/glue_numeric_defs.h \
- /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/c++/12/cstring \
- /usr/include/string.h /usr/include/strings.h
+ /usr/include/c++/12/bits/erase_if.h \
+ /home/gauthimd/AttitudeMathLib/AML/AML.h \
+ /home/gauthimd/AttitudeMathLib/AML/AMLVECTOR3.h \
+ /usr/include/c++/12/iostream

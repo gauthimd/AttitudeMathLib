@@ -1,0 +1,21 @@
+Start testing: Aug 01 16:33 CDT
+----------------------------------------------------------
+1/1 Testing: test_all
+1/1 Test: test_all
+Command: "/home/gauthimd/AttitudeMathLib/build/test/AML_Test"
+Directory: /home/gauthimd/AttitudeMathLib/build
+"test_all" start time: Aug 01 16:33 CDT
+Output:
+----------------------------------------------------------
+===============================================================================
+All tests passed (12 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_all" end time: Aug 01 16:33 CDT
+"test_all" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 01 16:33 CDT

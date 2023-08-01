@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/AML_Test.dir/main.cpp.o -o AML_Test  ../AML/libAML.a 
+/usr/bin/c++ CMakeFiles/AML_Test.dir/main.cpp.o CMakeFiles/AML_Test.dir/AMLVector3Test.cpp.o -o AML_Test  ../AML/libAML.a 

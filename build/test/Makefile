@@ -185,6 +185,30 @@ AML_Test/fast:
 	cd /home/gauthimd/AttitudeMathLib/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/AML_Test.dir/build.make test/CMakeFiles/AML_Test.dir/build
 .PHONY : AML_Test/fast
 
+AMLVector3Test.o: AMLVector3Test.cpp.o
+.PHONY : AMLVector3Test.o
+
+# target to build an object file
+AMLVector3Test.cpp.o:
+	cd /home/gauthimd/AttitudeMathLib/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/AML_Test.dir/build.make test/CMakeFiles/AML_Test.dir/AMLVector3Test.cpp.o
+.PHONY : AMLVector3Test.cpp.o
+
+AMLVector3Test.i: AMLVector3Test.cpp.i
+.PHONY : AMLVector3Test.i
+
+# target to preprocess a source file
+AMLVector3Test.cpp.i:
+	cd /home/gauthimd/AttitudeMathLib/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/AML_Test.dir/build.make test/CMakeFiles/AML_Test.dir/AMLVector3Test.cpp.i
+.PHONY : AMLVector3Test.cpp.i
+
+AMLVector3Test.s: AMLVector3Test.cpp.s
+.PHONY : AMLVector3Test.s
+
+# target to generate assembly for a file
+AMLVector3Test.cpp.s:
+	cd /home/gauthimd/AttitudeMathLib/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/AML_Test.dir/build.make test/CMakeFiles/AML_Test.dir/AMLVector3Test.cpp.s
+.PHONY : AMLVector3Test.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -223,6 +247,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... AML_Test"
+	@echo "... AMLVector3Test.o"
+	@echo "... AMLVector3Test.i"
+	@echo "... AMLVector3Test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

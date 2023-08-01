@@ -184,12 +184,12 @@ example/CMakeFiles/AML_Example.dir/clean:
 test/CMakeFiles/AML_Test.dir/all: AML/CMakeFiles/AML.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AML_Test.dir/build.make test/CMakeFiles/AML_Test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/AML_Test.dir/build.make test/CMakeFiles/AML_Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gauthimd/AttitudeMathLib/build/CMakeFiles --progress-num=5,6 "Built target AML_Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gauthimd/AttitudeMathLib/build/CMakeFiles --progress-num=5,6,7 "Built target AML_Test"
 .PHONY : test/CMakeFiles/AML_Test.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/AML_Test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gauthimd/AttitudeMathLib/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gauthimd/AttitudeMathLib/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/AML_Test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gauthimd/AttitudeMathLib/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/AML_Test.dir/rule
