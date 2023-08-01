@@ -78,9 +78,9 @@ namespace AML
 	}
 
 	// Special Object Creators
-	static const Vector3::Vector3 xAxis(){return Vector3(1.0, 0.0, 0.0);}
-	static const Vector3::Vector3 yAxis(){return Vector3(0.0, 1.0, 0.0);}
-	static const Vector3::Vector3 zAxis(){return Vector3(0.0, 0.0, 1.0);}
+	const Vector3 Vector3::xAxis(){return Vector3(1.0, 0.0, 0.0);}
+	const Vector3 Vector3::yAxis(){return Vector3(0.0, 1.0, 0.0);}
+	const Vector3 Vector3::zAxis(){return Vector3(0.0, 0.0, 1.0);}
 
 	// Vector / Vector Elementwise Operations
 	Vector3 operator-(const Vector3& rhs){return Vector3(-rhs.x, -rhs.y, -rhs.z);}
