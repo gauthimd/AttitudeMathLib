@@ -5,6 +5,7 @@ project(AML_Test)
 add_executable(${PROJECT_NAME}
 	main.cpp
 	AMLVector3Test.cpp
+	AMLMatrix33Test.cpp
 	)
 
 target_link_libraries(
