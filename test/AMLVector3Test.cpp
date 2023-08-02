@@ -389,19 +389,19 @@ TEST_CASE("Normalized Vector3", "[Vector3]")
 {
     // Case 1
     Vector3 n = Vector3(2, -5, 4);
-    normalise(n);
+    normalize(n);
     CHECK(n.x == Approx(0.298142));
     CHECK(n.y == Approx(-0.745356));
     CHECK(n.z == Approx(0.596285));
     // Case 2
     n = Vector3(0.24, 0.0082, -0.03);
-    normalise(n);
+    normalize(n);
     CHECK(n.x == Approx(0.991708));
     CHECK(n.y == Approx(0.0338834));
     CHECK(n.z == Approx(-0.123964));
     // Case 3
     n = Vector3(-27, 83, -163);
-    normalise(n);
+    normalize(n);
     CHECK(n.x == Approx(-0.146027));
     CHECK(n.y == Approx(0.448898));
     CHECK(n.z == Approx(-0.881571));

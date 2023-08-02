@@ -202,15 +202,15 @@ namespace AML
 	Matrix33 operator/(double s, const Matrix33& rhs)
 	{
 		double data[3][3];
-		data[0][0] = s /rhs.data[0][0];
-		data[0][1] = s /rhs.data[0][1];
-		data[0][2] = s /rhs.data[0][2];
-		data[1][0] = s /rhs.data[1][0];
-		data[1][1] = s /rhs.data[1][1];
-		data[1][2] = s /rhs.data[1][2];
-		data[2][0] = s /rhs.data[2][0];
-		data[2][1] = s /rhs.data[2][1];
-		data[2][2] = s /rhs.data[2][2];
+		data[0][0] = s / rhs.data[0][0];
+		data[0][1] = s / rhs.data[0][1];
+		data[0][2] = s / rhs.data[0][2];
+		data[1][0] = s / rhs.data[1][0];
+		data[1][1] = s / rhs.data[1][1];
+		data[1][2] = s / rhs.data[1][2];
+		data[2][0] = s / rhs.data[2][0];
+		data[2][1] = s / rhs.data[2][1];
+		data[2][2] = s / rhs.data[2][2];
 		return Matrix33(data);
 	}
 	
@@ -252,8 +252,8 @@ namespace AML
 
 	double determinant(const Matrix33& rhs)
 	{
-		double det = rhs.m11 * (rhs.m22 * rhs.m33 - rhs.m32 * rhs.m23) -
-			     rhs.m12 * (rhs.m21 * rhs.m33 - rhs.m23 * rhs.m31) -
+		double det = rhs.m11 * (rhs.m22 * rhs.m33 - rhs.m23 * rhs.m32) -
+			     rhs.m12 * (rhs.m21 * rhs.m33 - rhs.m23 * rhs.m31) +
 			     rhs.m13 * (rhs.m21 * rhs.m32 - rhs.m22 * rhs.m31);
 		return det;
 	}
