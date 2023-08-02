@@ -6,7 +6,7 @@
 namespace AML
 {
 	class Vector3;
-	class Matrix33;
+	class Matrix33
 	{
 		public:
 			// Data
@@ -24,10 +24,10 @@ namespace AML
 			explicit Matrix33(const Vector3& v1, const Vector3& v2, const Vector3& v3);
 
 			// Operator Assignments (Matrix)
-			Matrix33& operator+=(const Matrix33&, rhs);
-			Matrix33& operator-=(const Matrix33&, rhs);
-			Matrix33& operator*=(const Matrix33&, rhs);
-			Matrix33& operator/=(const Matrix33&, rhs);
+			Matrix33& operator+=(const Matrix33& rhs);
+			Matrix33& operator-=(const Matrix33& rhs);
+			Matrix33& operator*=(const Matrix33& rhs);
+			Matrix33& operator/=(const Matrix33& rhs);
 
 			// Operator Assignments (Scalar)
 			Matrix33& operator+=(double rhs);
@@ -51,10 +51,10 @@ namespace AML
 	Vector3 operator*(const Matrix33& lhs, const Vector3& rhs);
 	
 	// Matrix / Scalar Operations
-	Matrix33 operator+(const Matrix33* lhs, double s);
-	Matrix33 operator-(const Matrix33* lhs, double s);
-	Matrix33 operator*(const Matrix33* lhs, double s);
-	Matrix33 operator/(const Matrix33* lhs, double s);
+	Matrix33 operator+(const Matrix33& lhs, double s);
+	Matrix33 operator-(const Matrix33& lhs, double s);
+	Matrix33 operator*(const Matrix33& lhs, double s);
+	Matrix33 operator/(const Matrix33& lhs, double s);
 	Matrix33 operator+(double s, const Matrix33& rhs);
 	Matrix33 operator-(double s, const Matrix33& rhs);
 	Matrix33 operator*(double s, const Matrix33& rhs);

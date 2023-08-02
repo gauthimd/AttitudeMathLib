@@ -23,7 +23,7 @@ namespace AML
 	 m31(data_[6]),m32(data_[7]),m33(data_[8])
 	{}
 
-	Matrix33::Matrix33(const double data[3][3])
+	Matrix33::Matrix33(const double data_[3][3])
 	:m11(data_[0][0]),m12(data_[0][1]),m13(data_[0][2]),
 	 m21(data_[1][0]),m22(data_[1][1]),m23(data_[1][2]),
 	 m31(data_[2][0]),m32(data_[2][1]),m33(data_[2][2])
@@ -37,7 +37,7 @@ namespace AML
 
 
 	// Operator Assignments (Matrix)
-	Matrix33& Matrix33::operator+=(const Matrix33&, rhs)
+	Matrix33& Matrix33::operator+=(const Matrix33& rhs)
 	{
 		m11 += rhs.m11;
 		m12 += rhs.m12;
@@ -51,7 +51,7 @@ namespace AML
 		return *this;
 	}
 
-	Matrix33& Matrix33::operator-=(const Matrix33&, rhs)
+	Matrix33& Matrix33::operator-=(const Matrix33& rhs)
 	{
 		m11 -= rhs.m11;
 		m12 -= rhs.m12;
@@ -65,17 +65,17 @@ namespace AML
 		return *this;
 	}
 
-	Matrix33& Matrix33::operator*=(const Matrix33&, rhs)
+	Matrix33& Matrix33::operator*=(const Matrix33& rhs)
 	{
-		double m11_temp m11 * rhs.m11 + m12 * rhs.m21 + m13 * rhs.m31;
-		double m12_temp m11 * rhs.m12 + m12 * rhs.m22 + m13 * rhs.m32;
-		double m13_temp m11 * rhs.m13 + m12 * rhs.m23 + m13 * rhs.m33;
-		double m21_temp m21 * rhs.m11 + m22 * rhs.m21 + m23 * rhs.m31;
-		double m22_temp m21 * rhs.m12 + m22 * rhs.m22 + m23 * rhs.m32;
-		double m23_temp m21 * rhs.m13 + m22 * rhs.m23 + m23 * rhs.m33;
-		double m31_temp m31 * rhs.m11 + m32 * rhs.m21 + m33 * rhs.m31;
-		double m32_temp m31 * rhs.m12 + m32 * rhs.m22 + m33 * rhs.m32;
-		double m33_temp m31 * rhs.m13 + m32 * rhs.m23 + m33 * rhs.m33;
+		double m11_temp = m11 * rhs.m11 + m12 * rhs.m21 + m13 * rhs.m31;
+		double m12_temp = m11 * rhs.m12 + m12 * rhs.m22 + m13 * rhs.m32;
+		double m13_temp = m11 * rhs.m13 + m12 * rhs.m23 + m13 * rhs.m33;
+		double m21_temp = m21 * rhs.m11 + m22 * rhs.m21 + m23 * rhs.m31;
+		double m22_temp = m21 * rhs.m12 + m22 * rhs.m22 + m23 * rhs.m32;
+		double m23_temp = m21 * rhs.m13 + m22 * rhs.m23 + m23 * rhs.m33;
+		double m31_temp = m31 * rhs.m11 + m32 * rhs.m21 + m33 * rhs.m31;
+		double m32_temp = m31 * rhs.m12 + m32 * rhs.m22 + m33 * rhs.m32;
+		double m33_temp = m31 * rhs.m13 + m32 * rhs.m23 + m33 * rhs.m33;
 
 		m11 = m11_temp;
 		m12 = m12_temp;
@@ -90,7 +90,7 @@ namespace AML
 		return *this;
 	}
 
-	Matrix33& Matrix33::operator/=(const Matrix33&, rhs)
+	Matrix33& Matrix33::operator/=(const Matrix33& rhs)
 	{
 		(*this) *= inverse(rhs);
 		return *this;
@@ -108,6 +108,7 @@ namespace AML
 		m31 += rhs;
 		m32 += rhs;
 		m33 += rhs;
+		return *this;
 	}
 
 	Matrix33& Matrix33::operator-=(double rhs)
@@ -121,6 +122,7 @@ namespace AML
 		m31 -= rhs;
 		m32 -= rhs;
 		m33 -= rhs;
+		return *this;
 	}
 
 	Matrix33& Matrix33::operator*=(double rhs)
@@ -134,6 +136,7 @@ namespace AML
 		m31 *= rhs;
 		m32 *= rhs;
 		m33 *= rhs;
+		return *this;
 	}
 
 	Matrix33& Matrix33::operator/=(double rhs)
@@ -147,13 +150,14 @@ namespace AML
 		m31 /= rhs;
 		m32 /= rhs;
 		m33 /= rhs;
+		return *this;
 	}
 
 
 	//Special Object Creators
 	const Matrix33 Matrix33::identity()
 	{
-		double data[3][3]={{1,0,0},{0,1,0},{0,0,1}}
+		double data[3][3]={{1,0,0},{0,1,0},{0,0,1}};
 		return Matrix33(data);
 	}
 
@@ -161,15 +165,16 @@ namespace AML
 	Matrix33 operator-(const Matrix33& rhs)
 	{
 		double data[3][3];
-		data[0][0] = rhs.data[0][0];
-		data[0][1] = rhs.data[0][1];
-		data[0][2] = rhs.data[0][2];
-		data[1][0] = rhs.data[1][0];
-		data[1][1] = rhs.data[1][1];
-		data[1][2] = rhs.data[1][2];
-		data[2][0] = rhs.data[2][0];
-		data[2][1] = rhs.data[2][1];
-		data[2][2] = rhs.data[2][2];
+		data[0][0] = -rhs.data[0][0];
+		data[0][1] = -rhs.data[0][1];
+		data[0][2] = -rhs.data[0][2];
+		data[1][0] = -rhs.data[1][0];
+		data[1][1] = -rhs.data[1][1];
+		data[1][2] = -rhs.data[1][2];
+		data[2][0] = -rhs.data[2][0];
+		data[2][1] = -rhs.data[2][1];
+		data[2][2] = -rhs.data[2][2];
+		return Matrix33(data);
 	}
 
 	Matrix33 operator+(const Matrix33& lhs, const Matrix33& rhs){return (Matrix33(lhs) += rhs);}
@@ -187,10 +192,10 @@ namespace AML
 	}
 
 	// Matrix / Scalar Operations
-	Matrix33 operator+(const Matrix33* lhs, double s){return (Matrix33(lhs) += s);}
-	Matrix33 operator-(const Matrix33* lhs, double s){return (Matrix33(lhs) -= s);}
-	Matrix33 operator*(const Matrix33* lhs, double s){return (Matrix33(lhs) *= s);}
-	Matrix33 operator/(const Matrix33* lhs, double s){return (Matrix33(lhs) /= s);}
+	Matrix33 operator+(const Matrix33& lhs, double s){return (Matrix33(lhs) += s);}
+	Matrix33 operator-(const Matrix33& lhs, double s){return (Matrix33(lhs) -= s);}
+	Matrix33 operator*(const Matrix33& lhs, double s){return (Matrix33(lhs) *= s);}
+	Matrix33 operator/(const Matrix33& lhs, double s){return (Matrix33(lhs) /= s);}
 	Matrix33 operator+(double s, const Matrix33& rhs){return (Matrix33(s) += rhs);}
 	Matrix33 operator-(double s, const Matrix33& rhs){return (Matrix33(s) -= rhs);}
 	Matrix33 operator*(double s, const Matrix33& rhs){return (Matrix33(rhs) *= s);}
@@ -260,15 +265,15 @@ namespace AML
 		{
 			double result[9];
 			double invdet = 1.0 / determinant(rhs);
-			result[0] = (rhs.m22 * rhs.33 - rhs.m32 * rhs.23) * invdet;
-			result[1] = (rhs.m13 * rhs.32 - rhs.m12 * rhs.33) * invdet;
-			result[2] = (rhs.m12 * rhs.23 - rhs.m13 * rhs.22) * invdet;
-			result[3] = (rhs.m23 * rhs.31 - rhs.m21 * rhs.33) * invdet;
-			result[4] = (rhs.m11 * rhs.33 - rhs.m13 * rhs.31) * invdet;
-			result[5] = (rhs.m21 * rhs.13 - rhs.m11 * rhs.23) * invdet;
-			result[6] = (rhs.m21 * rhs.32 - rhs.m31 * rhs.22) * invdet;
-			result[7] = (rhs.m31 * rhs.12 - rhs.m11 * rhs.32) * invdet;
-			result[8] = (rhs.m11 * rhs.22 - rhs.m21 * rhs.12) * invdet;
+			result[0] = (rhs.m22 * rhs.m33 - rhs.m32 * rhs.m23) * invdet;
+			result[1] = (rhs.m13 * rhs.m32 - rhs.m12 * rhs.m33) * invdet;
+			result[2] = (rhs.m12 * rhs.m23 - rhs.m13 * rhs.m22) * invdet;
+			result[3] = (rhs.m23 * rhs.m31 - rhs.m21 * rhs.m33) * invdet;
+			result[4] = (rhs.m11 * rhs.m33 - rhs.m13 * rhs.m31) * invdet;
+			result[5] = (rhs.m21 * rhs.m13 - rhs.m11 * rhs.m23) * invdet;
+			result[6] = (rhs.m21 * rhs.m32 - rhs.m31 * rhs.m22) * invdet;
+			result[7] = (rhs.m31 * rhs.m12 - rhs.m11 * rhs.m32) * invdet;
+			result[8] = (rhs.m11 * rhs.m22 - rhs.m21 * rhs.m12) * invdet;
 			return Matrix33(result);
 		}
 		return Matrix33(NAN);
