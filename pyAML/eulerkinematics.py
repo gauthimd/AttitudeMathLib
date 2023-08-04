@@ -42,7 +42,7 @@ def eulerIntegration(X, Xdot, dt):
     return X + Xdot*dt
 
 attitude = degToRad([0,0,0])
-omega_body = degToRad([0,0,5])
+omega_body = degToRad([2,-3,0])
 
 dt = 0.01
 time=[]
