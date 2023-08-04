@@ -38,28 +38,17 @@ def eulerAngleRatesXYZ(attitude, omega_body):
                   [0, np.sin(phi)/np.cos(theta), np.cos(phi)/np.cos(theta)]])
     return np.matmul(E, omega_body)
 
-def eulerIntegration(X, Xdot, dt):
-    return X + Xdot*dt
+def printEulerAngles(title, attitude):
+    print("Euler Angles {} [{}, {}, {}]".format(title, attitude[0], attitude[1], attitude[2]))
 
-attitude = degToRad([0.1,0,0])
-omega_body = degToRad([0,20,0])
+def LinearInterpolate(R0, R1, t):
+    return (R0*(1-t) + R1*t)
 
-dt = 0.01
-time=[]
-phi=[]
-theta=[]
-psi=[]
+attitude0 = degToRad([0,0,0])
+attitude1 = degToRad([-30,45,135])
 
-for t in np.arange(0,20,dt):
-    attitude_dot = eulerAngleRatesXYZ(attitude, omega_body)
-    attitude = eulerIntegration(attitude, attitude_dot, dt)
-    time.append(t)
-    phi.append(radToDeg(attitude[0]))
-    theta.append(radToDeg(attitude[1]))
-    psi.append(radToDeg(attitude[2]))
+printEulerAngles("Start", radToDeg(attitude0))
+printEulerAngles("End", radToDeg(attitude1))
 
-plt.plot(time, phi, label="Roll")
-plt.plot(time, theta, label="Pitch")
-plt.plot(time, psi, label="Yaw")
-plt.legend()
-plt.savefig("Attitude4.png")
+attitude_interp = LinearInterpolate(attitude0, attitude1, 0.5)
+printEulerAngles("Interp t=0.5", radToDeg(attitude_interp))
